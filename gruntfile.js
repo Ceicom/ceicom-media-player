@@ -73,15 +73,6 @@ module.exports = function (grunt) {
             options: {
                 presets: ['@babel/preset-env']
             },
-
-            jsfiles: {
-                files: [{
-                    expand: true,
-                    cwd: 'js',
-                    src: ['script.js']
-                }]
-            },
-
             dist: {
                 files: { 'build/cmp.js': 'js/script.js' }
             }
@@ -118,7 +109,7 @@ module.exports = function (grunt) {
             },
             jsfiles: {
                 files: ['js/script.js'],
-                tasks: ['babel:jsfiles', 'uglify:jsfiles']
+                tasks: ['babel', 'uglify:jsfiles']
             },
             gruntfile: {
                 files: ['gruntfile.js']
