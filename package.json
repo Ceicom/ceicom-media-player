@@ -1,0 +1,30 @@
+{
+  "name": "media-player",
+  "version": "1.0.0",
+  "description": "Media Player for Ceicom projects",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ceicom",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "autoprefixer": "latest",
+    "grunt": "latest",
+    "grunt-babel": "latest",
+    "grunt-browser-sync": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-uglify-es": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-postcss": "latest",
+    "grunt-svgmin": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest"
+  }
+}

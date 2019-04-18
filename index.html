@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="build/cmp.css">
+    <title>Media Player</title>
+</head>
+
+<body>
+    <div class="cmp-player">
+        <button type="button" class="btn play-btn"></button>
+        <div class="progress-bar-wrapper">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="volume-wrapper">
+            <div class="volume-action-wrapper">
+                <input type="range" name="points" min="0" max="10" value="10" orient="vertical" class="volume-input">
+            </div>
+        </div>
+        <div class="time">00:00 / 00:00</div>
+    </div>
+
+    <div class="cml-music-list-wrapper">
+        <ul class="cml-music-list"></ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="build/cmp.js"></script>
+    <script>
+        var debug;
+        $.ajax('test/audio.json').then(data => {
+            debug = new CeicomMediaPlayer(data);
+            new CeicomMediaList(data);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "track": "Cavalo",
+    "mp3": "/test/mp3/cavalo.mp3",
+    "type": "audio",
+    "typemedia": "audio"
+  },
+  {
+    "track": "Coyote",
+    "mp3": "/test/mp3/coyote.mp3",
+    "type": "audio",
+    "typemedia": "audio"
+  }
+]

@@ -1,0 +1,155 @@
+/* ----------*/
+/* VARIABLES */
+/* ----------*/
+
+@color-white: #fff;
+@color-black: #111;
+@color-silver: #e8e8e8;
+@color-grey: #666;
+@color-blue: #0088d8;
+@color-green: #4acc4a;
+@color-red: #ce0505;
+@color-light-pink: #ffc6c6;
+
+@icon-play-path: "icons/play-button.svg";
+@icon-pause-path: "icons/pause-button.svg";
+@icon-speaker-path: "icons/speaker-button.svg";
+
+/* ------------------- */
+/* CEICOM MUSIC PLAYER */
+/* ------------------- */
+
+.cmp-player {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: @color-black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    margin-top: 150px;
+    
+    .error-msg {
+        color: @color-white;
+        text-align: center;
+        width: 100%;
+    }
+    
+    &.offline:before {
+        content: 'Sem conexão com a internet, tentando se reconectar...';
+        position: absolute;
+        top: -65px;
+        left: 0;
+        right: 0;
+        background-color: @color-silver;
+        font-size: 13px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .btn {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        border: 0;
+        background: no-repeat center/15px transparent;
+        background-image: url(@icon-play-path);
+    }
+    
+    &.playing .btn {
+        background-image: url(@icon-pause-path);
+    } 
+    
+    .time {
+        color: @color-white;
+        width: 100px;
+        text-align: center;
+        font-size: 13px;
+    } 
+    
+    .progress-bar-wrapper {
+        background: @color-grey;
+        height: 15px;
+        width: 100%;
+        margin: 0 15px;
+    }
+    
+    .progress-bar {
+        background: @color-green;
+        height: 100%;
+        width: 100%;
+        transform-origin: left;
+        transform: scaleX(0);
+    } 
+    
+    .volume-wrapper {
+        position: relative;
+        cursor: pointer;
+        width: 30px;
+        height: 15px;
+        border: 0;
+        background: no-repeat center/18px transparent;
+        background-image: url(@icon-speaker-path);
+
+        &.active .volume-action-wrapper {
+            display: flex;
+        }
+    } 
+    
+    .volume-action-wrapper {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 23px;
+        width: 30px;
+        justify-content: center;
+        background-color: @color-black;
+        padding: 5px 0;
+    }
+
+    .volume-input {
+        height: 125px;
+        appearance: slider-vertical;
+        -webkit-appearance: slider-vertical;
+    }
+}
+
+/* ----------------- */
+/* CEICOM MUSIC LIST */
+/* ----------------- */
+
+.cml-music-list-wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+
+    .cml-music-list {
+        list-style: none;
+        background: @color-black;
+        max-height: 300px;
+        margin: 1px -20px 0 0;
+        padding: 0;
+        overflow-y: auto; 
+        
+        .music-item {
+            color: @color-white;
+            padding: 10px 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &.active {
+                background-color: @color-blue;
+            }
+            & + .music-item {
+                border-top: 1px solid @color-white;
+            }
+        }
+        
+        .music-item.error {
+            color: @color-red;
+            background-color: @color-light-pink;
+        }
+    }
+}
