@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="cmp-player">
+    <!-- <div class="cmp-player">
         <button type="button" class="btn play-btn"></button>
         <div class="progress-bar-wrapper">
             <div class="progress-bar"></div>
@@ -25,15 +25,43 @@
 
     <div class="cml-music-list-wrapper">
         <ul class="cml-music-list"></ul>
+    </div> -->
+
+    <div class="cvp-player-wrapper">
+        <div id="cvp-player"></div>
+        <div class="cmp-player">
+            <button type="button" class="btn play-btn"></button>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="volume-wrapper">
+                <div class="volume-action-wrapper">
+                    <input type="range" name="points" min="0" max="10" value="10" orient="vertical"
+                        class="volume-input">
+                </div>
+            </div>
+            <div class="time">00:00 / 00:00</div>
+            <div class="expand-button"></div>
+        </div>
+    </div>
+
+    <div class="cml-music-list-wrapper">
+        <ul class="cml-music-list"></ul>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="build/cmp.js"></script>
     <script>
-        var debug;
-        $.ajax('test/audio.json').then(data => {
-            debug = new CeicomMediaPlayer(data);
-            new CeicomMediaList(data);
+        // var debugAudio;
+        // $.ajax('test/audio.json').then(function (data) {
+        //     debugAudio = new CeicomMediaPlayer(data);
+        //     new CeicomMediaList(data);
+        // });
+
+        var debugVideo;
+        $.ajax('test/video.json').then(function (data) {
+            debugVideo = new CeicomVideoPlayer(data);
+            new CeicomMediaList(data, true);
         });
     </script>
 </body>

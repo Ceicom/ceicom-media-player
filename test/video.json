@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Oh My God",
+        "link": "https://www.youtube.com/watch?v=jLO1CPYv0hc",
+        "type": "youtube",
+        "typemedia": "video"
+    },
+    {
+        "title": "Calm Owl",
+        "link": "https://www.youtube.com/watch?v=FBgLytbB-uE",
+        "type": "youtube",
+        "typemedia": "vinheta"
+    },
+    {
+        "title": "Hey, Ron. Hey, Billy.",
+        "link": "https://www.youtube.com/watch?v=zBJU9ndpH1Q",
+        "type": "youtube",
+        "typemedia": "video"
+    },
+    {
+        "title": "Cereal",
+        "link": "https://www.youtube.com/watch?v=v-RE7RUzjf8",
+        "type": "youtube",
+        "typemedia": "vinheta"
+    },
+    {
+        "title": "Wildebeest",
+        "link": "https://www.youtube.com/watch?v=HrN-GPYlcbQ",
+        "type": "youtube",
+        "typemedia": "video"
+    },
+    {
+        "title": "boilin' point",
+        "link": "https://www.youtube.com/watch?v=xYxbXzLNn0w",
+        "type": "youtube",
+        "typemedia": "vinheta"
+    }
+]

@@ -14,6 +14,7 @@
 @icon-play-path: "icons/play-button.svg";
 @icon-pause-path: "icons/pause-button.svg";
 @icon-speaker-path: "icons/speaker-button.svg";
+@icon-expand-path: "icons/expand-button.svg";
 
 /* ------------------- */
 /* CEICOM MUSIC PLAYER */
@@ -51,7 +52,7 @@
     .btn {
         cursor: pointer;
         width: 15px;
-        height: 15px;
+        height: $width;
         border: 0;
         background: no-repeat center/15px transparent;
         background-image: url(@icon-play-path);
@@ -95,7 +96,25 @@
         &.active .volume-action-wrapper {
             display: flex;
         }
-    } 
+    }
+
+    .expand-button {
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 15px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: no-repeat center/15px transparent;
+            background-image: url(@icon-expand-path);
+        }
+    }
     
     .volume-action-wrapper {
         display: none;
@@ -151,5 +170,33 @@
             color: @color-red;
             background-color: @color-light-pink;
         }
+    }
+}
+
+/* ------------------- */
+/* CEICOM VIDEO PLAYER */
+/* ------------------- */
+
+.cvp-player-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cmp-player {
+        margin: 0;
+        z-index: 2;
     }
 }
